@@ -1,0 +1,18 @@
+#root{
+    margin: 20px;
+}
+
+.titulo{
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.row{
+    justify-content: center;
+}
+
+.form-control{
+    margin: 5px;
+}

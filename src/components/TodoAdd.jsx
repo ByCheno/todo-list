@@ -24,9 +24,9 @@ export const TodoAdd = ({ onNewTodo }) => {
 
 
     return (
-        <form onSubmit={ onFormSubmit }>
+        <form onSubmit={ onFormSubmit } className='form d-flex justify-content-between'>
             <input type="text" 
-            placeholder="Que hacer..." 
+            placeholder="Agrega aqui tus tareas..." 
             className="form-control" 
             name="description"
             value={description}
@@ -35,6 +35,7 @@ export const TodoAdd = ({ onNewTodo }) => {
             <button type="submit" className="btn btn-outline-primary mt-1 btn-block">
                 Agregar
             </button>
+
         </form>
     )
 }

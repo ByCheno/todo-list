@@ -1,23 +1,30 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { todoReducer } from "./components/todoReducer";
 import { TodoList } from "./components/TodoList";
 import { TodoAdd } from "./components/TodoAdd";
 
 const initialState = [
-  {
-    id: new Date().getTime(),
-    description: "Aprender React",
-    done: false,
-  },
-  {
-    id: new Date().getTime() + 1000,
-    description: "Aprender Node",
-    done: false,
-  },
+  // {
+  //   id: new Date().getTime(),
+  //   description: "Aprender React",
+  //   done: false,
+  // }
+
+
+  
 ];
 
+const init = () => {
+  return JSON.parse(localStorage.getItem('todos')) || [];
+}
+
 export const App = () => {
-  const [todos, dispatch] = useReducer(todoReducer, initialState);
+  const [todos, dispatch] = useReducer(todoReducer, initialState, init);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos])
+  
 
   const handleNewTodo = (todo) => {
     const action = {
@@ -29,12 +36,12 @@ export const App = () => {
 
   return (
     <>
-      <h1>Todo App: 10 || Pendientes: 2</h1>
+      <h1 className="titulo">Todo App: 10 || Pendientes: 2</h1>
       <hr />
 
 
       <div className="row">
-        <div className="col-7">
+        <div className="col-5">
           <TodoList todos={todos} />
         </div>
 
