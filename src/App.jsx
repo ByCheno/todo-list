@@ -42,6 +42,10 @@ export const App = () => {
     dispatch(action);
   }
 
+  const handleToogleTodo = (id) => {
+    console.log(id);
+  }
+
   return (
     <>
       <h1 className="titulo">Todo App: 10 || Pendientes: 2</h1>
@@ -50,7 +54,11 @@ export const App = () => {
 
       <div className="row">
         <div className="col-5">
-          <TodoList todos={todos} onDeleteTodo={ handleDeleteTodo }/>
+          <TodoList 
+          todos={todos} 
+          onDeleteTodo={ handleDeleteTodo }
+          onToogle={ handleToogleTodo }
+          />
         </div>
 
         <div className="col-5">

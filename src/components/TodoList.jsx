@@ -1,7 +1,7 @@
 
 import { TodoItem } from "./TodoItem"
 
-export const TodoList = ({ todos = [], onDeleteTodo }) => {
+export const TodoList = ({ todos = [], onDeleteTodo, onToogle }) => {
 
 
     return (
@@ -12,6 +12,7 @@ export const TodoList = ({ todos = [], onDeleteTodo }) => {
                         key={todo.id}
                         todo={todo}
                         onDeleteTodo={ id => onDeleteTodo(id) }
+                        onToogle={ onToogle }
                     />
                 ))
             }
