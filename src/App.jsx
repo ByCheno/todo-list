@@ -43,7 +43,11 @@ export const App = () => {
   }
 
   const handleToogleTodo = (id) => {
-    console.log(id);
+    const action = {
+      type: "Toogle Todo",
+      payload: id,
+    }
+    dispatch(action);
   }
 
   return (

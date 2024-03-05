@@ -16,3 +16,7 @@
 .form-control{
     margin: 5px;
 }
+
+.tachado p{
+    text-decoration: line-through;
+}
