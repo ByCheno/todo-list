@@ -8,7 +8,7 @@ export const App = () => {
 
   return (
     <>
-      <h1 className="titulo">Todo App: {todosCount} || Pendientes: {todosPending}</h1>
+      <h1 className="titulo">Lista-Tareas: {todosCount} || Pendientes: {todosPending}</h1>
       <hr />
 
 
@@ -22,7 +22,7 @@ export const App = () => {
         </div>
 
         <div className="col-5">
-          <h4>Agregar TODO</h4>
+          <h4>Agregar Tareas</h4>
           <hr />
 
           <TodoAdd onNewTodo={handleNewTodo}/>
