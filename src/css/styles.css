@@ -20,3 +20,7 @@
 .tachado p{
     text-decoration: line-through;
 }
+
+.tachado{
+    background-color: #ff0000;
+}
