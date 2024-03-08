@@ -13,7 +13,7 @@ export const App = () => {
 
 
       <div className="row">
-        <div className="col-5">
+        <div className="col-12 col-md-6">
           <TodoList 
           todos={todos} 
           onDeleteTodo={ handleDeleteTodo }
@@ -21,7 +21,7 @@ export const App = () => {
           />
         </div>
 
-        <div className="col-5">
+        <div className="col-12 col-md-6">
           <h4>Agregar Tareas</h4>
           <hr />
 
